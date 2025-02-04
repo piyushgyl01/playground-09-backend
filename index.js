@@ -14,99 +14,17 @@ app.get("/", (req, res) => {
   res.send("Hello, Express!");
 });
 
-const mockStudents = [
-  {
-    name: "Alice Johnson",
-    age: 20,
-    gender: "Female",
-    marks: 92,
-    attendance: 95,
-    grade: "A",
-  },
-  {
-    name: "Bob Smith",
-    age: 22,
-    gender: "Male",
-    marks: 75,
-    attendance: 88,
-    grade: "C",
-  },
-  {
-    name: "Charlie Brown",
-    age: 19,
-    gender: "Male",
-    marks: 85,
-    attendance: 90,
-    grade: "B",
-  },
-  {
-    name: "Diana Miller",
-    age: 21,
-    gender: "Female",
-    marks: 65,
-    attendance: 75,
-    grade: "D",
-  },
-  {
-    name: "Eva Davis",
-    age: 23,
-    gender: "Female",
-    marks: 58,
-    attendance: 72,
-    grade: "F",
-  },
-  {
-    name: "Frank Wilson",
-    age: 24,
-    gender: "Male",
-    marks: 95,
-    attendance: 98,
-    grade: "A",
-  },
-  {
-    name: "Grace Taylor",
-    age: 18,
-    gender: "Female",
-    marks: 80,
-    attendance: 85,
-    grade: "B",
-  },
-  {
-    name: "Henry Martinez",
-    age: 25,
-    gender: "Male",
-    marks: 72,
-    attendance: 80,
-    grade: "C",
-  },
-  {
-    name: "Ivy Anderson",
-    age: 20,
-    gender: "Non-binary",
-    marks: 89,
-    attendance: 92,
-    grade: "B",
-  },
-  {
-    name: "Jack Thomas",
-    age: 19,
-    gender: "Male",
-    marks: 68,
-    attendance: 78,
-    grade: "D",
-  },
-];
 
-const createData = async (data) => {
-  try {
-    const addedData = await Student.insertMany(data);
-    console.log(addedData);
-  } catch (error) {
-    console.log("ERROR OCCURED WHILE ADDING TO DATABASE", error);
-  }
-};
+// const createData = async (data) => {
+//   try {
+//     const addedData = await Student.insertMany(data);
+//     console.log(addedData);
+//   } catch (error) {
+//     console.log("ERROR OCCURED WHILE ADDING TO DATABASE", error);
+//   }
+// };
 
-createData(mockStudents);
+// createData(mockStudents);
 
 app.get("/students", async (req, res) => {
   try {
